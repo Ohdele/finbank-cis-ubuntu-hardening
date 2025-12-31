@@ -1,0 +1,842 @@
+Script started on 2025-12-31 18:41:41+01:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="114" LINES="24"]
+[?2004h[32m[18:41:41] dele@dele-vBox:~/finbank-cis-ubuntu-hardening$ [0m [7mapt list --upgradable[27mapt list --upgradable
+[?2004lListing... 0%Listing... 0%Listing... 0%Listing... Done
+[?2004h[32m[18:43:55] dele@dele-vBox:~/finbank-cis-ubuntu-hardening$ [0m V
+[?2004lV: command not found
+[?2004h[32m[18:45:35] dele@dele-vBox:~/finbank-cis-ubuntu-hardening$ [0m [7mdpkg -l[27mdpkg -l
+[?2004l[?1h=Desired=Unknown/Install/Remove/Purge/Hold[m
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend[m
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)[m
+||/ Name                                       Version                                 Architecture Description[m
++++-==========================================-=======================================-============-=============[m[7m>[27m
+ii  accountsservice                            22.07.5-2ubuntu1.5                      amd64        query and man[m[7m>[27m
+ii  acl                                        2.3.1-1                                 amd64        access contro[m[7m>[27m
+ii  acpi-support                               0.144                                   amd64        scripts for h[m[7m>[27m
+ii  acpid                                      1:2.0.33-1ubuntu1                       amd64        Advanced Conf[m[7m>[27m
+ii  adduser                                    3.118ubuntu5                            all          add and remov[m[7m>[27m
+ii  adwaita-icon-theme                         41.0-1ubuntu1                           all          default icon [m[7m>[27m
+ii  aisleriot                                  1:3.22.22-1                             amd64        GNOME solitai[m[7m>[27m
+ii  alsa-base                                  1.0.25+dfsg-0ubuntu7                    all          ALSA driver c[m[7m>[27m
+ii  alsa-topology-conf                         1.2.5.1-2                               all          ALSA topology[m[7m>[27m
+ii  alsa-ucm-conf                              1.2.6.3-1ubuntu1.12                     all          ALSA Use Case[m[7m>[27m
+ii  alsa-utils                                 1.2.6-1ubuntu1                          amd64        Utilities for[m[7m>[27m
+ii  amd64-microcode                            3.20191218.1ubuntu2.3                   amd64        Processor mic[m[7m>[27m
+ii  anacron                                    2.3-31ubuntu2                           amd64        cron-like pro[m[7m>[27m
+ii  apache2                                    2.4.52-1ubuntu4.16                      amd64        Apache HTTP S[m[7m>[27m
+ii  apache2-bin                                2.4.52-1ubuntu4.16                      amd64        Apache HTTP S[m[7m>[27m
+ii  apache2-data                               2.4.52-1ubuntu4.16                      all          Apache HTTP S[m[7m>[27m
+ii  apache2-utils                              2.4.52-1ubuntu4.16                      amd64        Apache HTTP S[m[7m>[27m
+ii  apg                                        2.2.3.dfsg.1-5build2                    amd64        Automated Pas[m[7m>[27m
+[7mlines 1-23[27m[K[K[?1l>[?2004h[32m[18:46:11] dele@dele-vBox:~/finbank-cis-ubuntu-hardening$ [0m [7mdpkg -l > installed-packages.txt[27m
+[7mgit add installed-packages.txt && git commit -m "Record baseline installed packages"[27m
+[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdpkg -l > installed-packages.txt
+git add installed-packages.txt && git commit -m "Record baseline installed packages"
+[A
+[?2004l[master 3e22f25] Record baseline installed packages
+ 1 file changed, 1799 insertions(+)
+ create mode 100644 installed-packages.txt
+[?2004h[32m[18:46:27] dele@dele-vBox:~/finbank-cis-ubuntu-hardening$ [0m [7msystemctl list-unit-files --state=enabled[27msystemctl list-unit-files --state=enabled
+[?2004l[?1h=[0m[0;4mUNIT FILE                                     [0m[0m[0;4m STATE  [0m[0m[0;4m VENDOR PRESET[0m[m
+run-vmblock\x2dfuse.mount                      [0;1;32menabled[0m[0;1;32m [0m[0;1;32menabled      [0m[m
+snap-bare-5.mount                              [0;1;32menabled[0m[0;1;32m [0m[0;1;32menabled      [0m[m
+snap-core22-2163.mount                         [0;1;32menabled[0m[0;1;32m [0m[0;1;32menabled      [0m[m
+snap-core22-2193.mount                         [0;1;32menabled[0m[0;1;32m [0m[0;1;32menabled      [0m[m
+snap-firefox-7477.mount                        [0;1;32menabled[0m[0;1;32m [0m[0;1;32menabled      [0m[m
+snap-firefox-7559.mount                        [0;1;32menabled[0m[0;1;32m [0m[0;1;32menabled      [0m[m
+snap-gnome\x2d42\x2d2204-176.mount             [0;1;32menabled[0m[0;1;32m [0m[0;1;32menabled      [0m[m
+snap-gnome\x2d42\x2d2204-226.mount             [0;1;32menabled[0m[0;1;32m [0m[0;1;32menabled      [0m[m
+snap-gtk\x2dcommon\x2dthemes-1535.mount        [0;1;32menabled[0m[0;1;32m [0m[0;1;32menabled      [0m[m
+snap-snap\x2dstore-1113.mount                  [0;1;32menabled[0m[0;1;32m [0m[0;1;32menabled      [0m[m
+snap-snap\x2dstore-1216.mount                  [0;1;32menabled[0m[0;1;32m [0m[0;1;32menabled      [0m[m
+snap-snapd-21759.mount                         [0;1;32menabled[0m[0;1;32m [0m[0;1;32menabled      [0m[m
+snap-snapd-25577.mount                         [0;1;32menabled[0m[0;1;32m [0m[0;1;32menabled      [0m[m
+snap-snapd\x2ddesktop\x2dintegration-178.mount [0;1;32menabled[0m[0;1;32m [0m[0;1;32menabled      [0m[m
+[0m[0;4msnap-snapd\x2ddesktop\x2dintegration-315.mount[0m[0m[0;4m [0m[0;1;32m[0;4menabled[0m[0;1;32m[0;4m [0m[0;1;32m[0;4menabled      [0m[m
+acpid.path                                     [0;1;32menabled[0m[0;1;32m [0m[0;1;32menabled      [0m[m
+apport-autoreport.path                         [0;1;32menabled[0m[0;1;32m [0m[0;1;32menabled      [0m[m
+cups.path                                      [0;1;32menabled[0m[0;1;32m [0m[0;1;32menabled      [0m[m
+[0m[0;4mwhoopsie.path                                 [0m[0m[0;4m [0m[0;1;32m[0;4menabled[0m[0;1;32m[0;4m [0m[0;1;32m[0;4menabled      [0m[m
+accounts-daemon.service                        [0;1;32menabled[0m[0;1;32m [0m[0;1;32menabled      [0m[m
+anacron.service                                [0;1;32menabled[0m[0;1;32m [0m[0;1;32menabled      [0m[m
+apache2.service                                [0;1;32menabled[0m[0;1;32m [0m[0;1;32menabled      [0m[m
+[7mlines 1-23[27m[K[K[?1l>[?2004h[32m[18:48:44] dele@dele-vBox:~/finbank-cis-ubuntu-hardening$ [0m [7msudo systemctl disable apache2.service[27m
+[7msudo systemctl disable cups.service[27m
+[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo systemctl disable apache2.service
+sudo systemctl disable cups.service
+[A
+[?2004l[sudo] password for dele: 
+Synchronizing state of apache2.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install disable apache2
+Removed /etc/systemd/system/multi-user.target.wants/apache2.service.
+Synchronizing state of cups.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install disable cups
+Removed /etc/systemd/system/multi-user.target.wants/cups.service.
+Removed /etc/systemd/system/multi-user.target.wants/cups.path.
+Removed /etc/systemd/system/sockets.target.wants/cups.socket.
+Removed /etc/systemd/system/printer.target.wants/cups.service.
+[?2004h[32m[18:48:53] dele@dele-vBox:~/finbank-cis-ubuntu-hardening$ [0m [7msystemctl list-unit-files --state=enabled > enabled-ser[27m[7mv[27m[7mices-after-disable.txt [27m
+[7mgit add enabled-services-after-disable.txt && git commit -m "Document services after disabling unnecessary ones"[27m
+[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csystemctl list-unit-files --state=enabled > enabled-services-after-disable.txt
+git add enabled-services-after-disable.txt && git commit -m "Document services after disabling unnecessary ones"
+[A
+[?2004l[master 9bdba2f] Document services after disabling unnecessary ones
+ 1 file changed, 93 insertions(+)
+ create mode 100644 enabled-services-after-disable.txt
+[?2004h[32m[18:50:06] dele@dele-vBox:~/finbank-cis-ubuntu-hardening$ [0m [7msudo nano /etc/login.defs[27msudo nano /etc/login.defs
+[?2004l[?2004h[?1049h[22;0;0t[1;24r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[22;51H(B[0;7m[ Reading... ](B[m[22;49H(B[0;7m[ Read 346 lines ](B[m[H(B[0;7m  GNU nano 6.2                                      /etc/login.defs                                               [1;113H(B[m[23d(B[0;7m^G(B[m Help[23;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[23;65H(B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo[24d(B[0;7m^X(B[m Exit[24;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste[24;65H(B[0;7m^J(B[m Justify[81G(B[0;7m^/(B[m Go To Line   (B[0;7mM-E(B[m Redo[2d[36m#[3d# /etc/login.defs - Configuration control definitions for the login package.[4d#[5d# Three items must be defined:  MAIL_DIR, ENV_SUPATH, and ENV_PATH.[6d# If unspecified, some arbitrary (and possibly incorrect) value will[7d# be assumed.  All other items are optional - if not specified then[8d# the described action or option will be inhibited.[9d#[10d# Comment lines (lines beginning with "#") and blank lines are ignored.[11d#[12d# Modified for Linux.  --marekm[14d# REQUIRED for useradd/userdel/usermod[15d#   Directory where mailboxes reside, _or_ name of file, relative to the[16d#   home directory.  If you _do_ define MAIL_DIR and MAIL_FILE,[17d#   MAIL_DIR takes precedence.[18d#[19d#   Essentially:[20d#      - MAIL_DIR defines the location of users mail spool files[21d#        (for mbox use) by appending the username to MAIL_DIR as defined[2d[39m(B[m[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25h[8d[?25l[?12l[?25h[9d[?25l[?12l[?25h[10d[?25l[?12l[?25h[11d[?25l[?12l[?25h[12d[?25l[?12l[?25h[13d[?25l[?12l[?25h[14d[?25l[?12l[?25h[15d[?25l[?12l[?25h[16d[?25l[?12l[?25h[17d[?25l[?12l[?25h[18d[?25l[?12l[?25h[19d[?25l[?12l[?25h[20d[?25l[?12l[?25h[21d[?25l[22d[K[?12l[?25h7[2;22r8
+[1;24r[21;1H[36m#        below.[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#      - MAIL_FILE defines the location of the users mail spool files as the[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#        fully-qualified filename obtained by prepending the user home[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#        directory before $MAIL_FILE[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# NOTE: This is no more used for setting up users MAIL environment variable[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#       which is, starting from shadow 4.0.12-1 in Debian, entirely the[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#       job of the pam_mail PAM modules[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#       See default PAM configuration files provided for[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#       login, su, etc.[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# This is a temporary situation: setting these variables will soon[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# move to /etc/default/useradd and the variables will then be[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# no more supported[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1HMAIL_DIR[21;17H/var/mail[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#MAIL_FILE      .mail[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# Enable logging and display of /var/log/faillog login failure info.[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# This option conflicts with the pam_tally PAM module.[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1HFAILLOG_ENAB[38;5;208m            [39m(B[myes[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# Enable display of unknown usernames when login failures are recorded.[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# WARNING: Unknown usernames may become world readable. [39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# See #290803 and #298773 for details about how this could become a security[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# concern[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1HLOG_UNKFAIL_ENAB[38;5;208m        [39m(B[mno[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# Enable logging of successful logins[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1HLOG_OK_LOGINS[38;5;208m           [39m(B[mno[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# Enable "syslog" logging of su activity - in addition to sulog file logging.[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# SYSLOG_SG_ENAB does the same for newgrp and sg.[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1HSYSLOG_SU_ENAB[38;5;208m          [39m(B[myes[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1HSYSLOG_SG_ENAB[38;5;208m          [39m(B[myes[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h7[2;22r8M[1;24r[2;1H[?25l[?12l[?25h7[2;21r8M[1;24r[2;1HFAILLOG_ENAB[38;5;208m            [39m(B[myes[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m# This option conflicts with the pam_tally PAM module.[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m# Enable logging and display of /var/log/faillog login failure info.[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m#[39m(B[m[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25h[8d[?25l[?12l[?25h[9d[?25l[?12l[?25h[10d[?25l[?12l[?25h[11d[?25l[?12l[?25h[12d[?25l[?12l[?25h[13d[?25l[?12l[?25h[14d[?25l[?12l[?25h[15d[?25l[?12l[?25h[16d[?25l[?12l[?25h[17d[?25l[?12l[?25h[18d[?25l[?12l[?25h[19d[?25l[?12l[?25h[20d[?25l[?12l[?25h[21d[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# Enable "syslog" logging of su activity - in addition to sulog file logging.[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# SYSLOG_SG_ENAB does the same for newgrp and sg.[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1HSYSLOG_SU_ENAB[38;5;208m          [39m(B[myes[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1HSYSLOG_SG_ENAB[38;5;208m          [39m(B[myes[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# If defined, all su activity is logged to this file.[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#SULOG_FILE[38;5;208m     [36m/var/log/sulog[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# If defined, file which maps tty line to TERM environment parameter.[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# Each line of the file is in a format something like "vt100  tty01".[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#TTYTYPE_FILE[38;5;208m   [36m/etc/ttytype[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# If defined, login failures will be logged here in a utmp format[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# last, when invoked as lastb, will read /var/log/btmp, so...[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1HFTMP_FILE[38;5;208m       [39m(B[m/var/log/btmp[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# If defined, the command name to display when running "su -".  For[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# example, if this is defined as "su" then a "ps" will display the[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# command is "-su".  If not defined, then "ps" would display the[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# name of the shell actually being run, e.g. something like "-sh".[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1HSU_NAME[38;5;208m         [39m(B[msu[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# If defined, file which inhibits all the usual chatter during the login[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# sequence.  If a full pathname, then hushed mode will be enabled if the[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# user's name or shell are found in the file.  If not a full pathname, then[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# hushed mode will be enabled if the file exists in the user's home directory.[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1HHUSHLOGIN_FILE[38;5;208m  [39m(B[m.hushlogin[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#HUSHLOGIN_FILE[38;5;208m [36m/etc/hushlogins[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# *REQUIRED*  The default PATH settings, for superuser and normal users.[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# (they are minimal, add the rest in the shell startup files)[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1HENV_SUPATH[38;5;208m      [39m(B[mPATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1HENV_PATH[38;5;208m        [39m(B[mPATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# Terminal permissions[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#[38;5;208m       [36mTTYGROUP[38;5;208m        [36mLogin tty will be assigned this group ownership.[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#[38;5;208m       [36mTTYPERM[38;5;208m         [36mLogin tty will be set to this permission.[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# If you have a "write" program which is "setgid" to a special group[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# which owns the terminals, define TTYGROUP to the group number and[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# TTYPERM to 0620.  Otherwise leave TTYGROUP commented out and assign[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# TTYPERM to either 622 or 600.[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# In Debian /usr/bin/bsd-write or similar programs are setgid tty[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# However, the default and recommended value for TTYPERM is still 0600[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# to not allow anyone to write to anyone else console or terminal[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# Users can still allow other people to write them by issuing [39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# the "mesg y" command.[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1HTTYGROUP[38;5;208m        [39m(B[mtty[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1HTTYPERM[38;5;208m         [39m(B[m0600[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# Login configuration initializations:[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#[38;5;208m       [36mERASECHAR[38;5;208m       [36mTerminal ERASE character ('\010' = backspace).[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#[38;5;208m       [36mKILLCHAR[38;5;208m        [36mTerminal KILL character ('\025' = CTRL/U).[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#[38;5;208m       [36mUMASK[38;5;208m           [36mDefault "umask" value.[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# The ERASECHAR and KILLCHAR are used only on System V machines.[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# [39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# UMASK is the default umask value for pam_umask and is used by[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# useradd and newusers to set the mode of the new home directories.[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# 022 is the "historical" value in Debian for UMASK[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# 027, or even 077, could be considered better for privacy[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# There is no One True Answer here : each sysadmin must make up his/her[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# mind.[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# If USERGROUPS_ENAB is set to "yes", that will modify this UMASK default value[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# for private user groups, i. e. the uid is the same as gid, and username is[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# the same as the primary group name: for these, the user permissions will be[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# used as group permissions, e. g. 022 will become 002.[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# Prefix these values with "0" to get octal, "0x" to get hexadecimal.[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1HERASECHAR[38;5;208m       [39m(B[m0177[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1HKILLCHAR[38;5;208m        [39m(B[m025[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1HUMASK[38;5;208m           [39m(B[m022[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# HOME_MODE is used by useradd(8) and newusers(8) to set the mode for new[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# home directories.[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# If HOME_MODE is not set, the value of UMASK is used to create the mode.[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1HHOME_MODE[38;5;208m       [39m(B[m0750[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# Password aging controls:[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#[38;5;208m       [36mPASS_MAX_DAYS[38;5;208m   [36mMaximum number of days a password may be used.[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#[38;5;208m       [36mPASS_MIN_DAYS[38;5;208m   [36mMinimum number of days allowed between password changes.[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#[38;5;208m       [36mPASS_WARN_AGE[38;5;208m   [36mNumber of days warning given before a password expires.[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1HPASS_MAX_DAYS[38;5;208m   [39m(B[m99999[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1HPASS_MIN_DAYS[38;5;208m   [39m(B[m0[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1HPASS_WARN_AGE[38;5;208m   [39m(B[m7[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# Min/max values for automatic uid selection in useradd[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1HUID_MIN[38;5;208m[17X[21;25H[39m(B[m 1000[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25hP[?25l[?12l[?25hA[?25l[?12l[?25hS[?25l[?12l[?25hS[?25l[?12l[?25h_[?25l[?12l[?25hM[?25l[?12l[?25hA[?25l[?12l[?25hX[?25l[?12l[?25h_[?25l[?12l[?25hD[?25l[?12l[?25hA[?25l[?12l[?25hY[?25l[?12l[?25hS[?25l[?12l[?25h[17G[?25l[?12l[?25h9[?25l[?12l[?25h9[?25l[?12l[?25h9[?25l[?12l[?25h9[?25l[?12l[?25h9[?25l[1;69H(B[0;7m*[113G(B[m[?12l[?25h[14;21H [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h0[?25l[?12l[?25h[15d[?25l[?12l[?25h [?25l[?12l[?25h7[?25l[?12l[?25h[16d[?25l[?12l[?25h [?25l[?12l[?25h1[?25l[?12l[?25h4[24;1H[?1049l[23;0;0t[?1l>[?1049h[22;0;0t[1;24r[?12l[?25h[39;49m]104(B[m[4l[?7h[H[2J[?2004h[?1h=[?1h=(B[0;7m  GNU nano 6.2                              /etc/login.defs *                                      [1;98H(B[m[2d[36m# HOME_MODE is used by useradd(8) and newusers(8) to set the mode for new[3d# home directories.[4d# If HOME_MODE is not set, the value of UMASK is used to create the mode.[5d[39m(B[mHOME_MODE[38;5;208m       [39m(B[m0750[7d[36m#[8d# Password aging controls:[9d#[10d#[38;5;208m       [36mPASS_MAX_DAYS[38;5;208m   [36mMaximum number of days a password may be used.[11d#[38;5;208m       [36mPASS_MIN_DAYS[38;5;208m   [36mMinimum number of days allowed between password changes.[12d#[38;5;208m       [36mPASS_WARN_AGE[38;5;208m   [36mNumber of days warning given before a password expires.[13d#[14d[39m(B[mPASS_MAX_DAYS[38;5;208m   [39m(B[m90[15dPASS_MIN_DAYS[38;5;208m   [39m(B[m7[16dPASS_WARN_AGE[38;5;208m   [39m(B[m14[18d[36m#[19d# Min/max values for automatic uid selection in useradd[20d#[21d[39m(B[mUID_MIN[38;5;208m[17X[21;25H[39m(B[m 1000[23d(B[0;7m^G(B[m Help[23;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[23;65H(B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location[24d(B[0;7m^X(B[m Exit[24;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste[24;65H(B[0;7m^J(B[m Justify[81G(B[0;7m^/(B[m Go To Line[?25l[?12l[?25h[16;19H[?25l[?12l[?25h[?25l[23;17H        (B[0;7mM-D(B[m DOS Format          (B[0;7mM-A(B[m Append[65G        (B[0;7mM-B(B[m Backup File[K[24;2H(B[0;7mC(B[m Cancel[17G        (B[0;7mM-M(B[m Mac Format    [49G(B[0;7mM-P(B[m Prepend             (B[0;7m^T(B[m Browse[K[22d(B[0;7mFile Name to Write: /etc/login.defs                                                                [22;36H(B[m[?12l[?25h[?25l[42G[1K (B[0;7m[ Writing... ](B[m[K[1;61H(B[0;7m [98G(B[m[22;41H(B[0;7m[ Wrote 346 lines ](B[m[23;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut    [65G(B[0;7m^T(B[m Execute      (B[0;7m^C(B[m Location[24;2H(B[0;7mX(B[m Exit  [17G(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste        (B[0;7m^J(B[m Justify      (B[0;7m^/(B[m Go To Line[?12l[?25h[16;19H[?25l[22d[J[24d[?12l[?25h[24;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h[32m[18:54:03] dele@dele-vBox:~/finbank-cis-ubuntu-hardening$ [0m [7msudo nano /etc/pam.d/common-password[27msudo nano /etc/pam.d/common-password
+[?2004l[?2004h[?1049h[22;0;0t[1;24r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[22;43H(B[0;7m[ Reading... ](B[m[22;42H(B[0;7m[ Read 36 lines ](B[m[H(B[0;7m  GNU nano 6.2                         /etc/pam.d/common-password                                  [1;98H(B[m[23d(B[0;7m^G(B[m Help[23;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[23;65H(B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location[24d(B[0;7m^X(B[m Exit[24;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste[24;65H(B[0;7m^J(B[m Justify[81G(B[0;7m^/(B[m Go To Line[2d[36m#[3d# /etc/pam.d/common-password - password-related modules common to all services[4d#[5d# This file is included from other service-specific PAM config files,[6d# and should contain a list of modules that define the services to be[7d# used to change user passwords.  The default is pam_unix.[9d# Explanation of pam_unix options:[10d# The "yescrypt" option enables[11d#hashed passwords using the yescrypt algorithm, introduced in Debian[12d#11.  Without this option, the default is Unix crypt.  Prior releases[13d#used the option "sha512"; if a shadow password hash will be shared[14d#between Debian 11 and older releases replace "yescrypt" with "sha512"[15d#for compatibility .  The "obscure" option replaces the old[16d#`OBSCURE_CHECKS_ENAB' option in login.defs.  See the pam_unix manpage[17d#for other options.[19d# As of pam 1.0.1-6, this file is managed by pam-auth-update by default.[20d# To take advantage of this, it is recommended that you configure any[21d# local modules either before or after the default block, and use[2d[39m(B[m[?12l[?25h[24;1H[?1049l[23;0;0t[?1l>[?1049h[22;0;0t[1;24r[?12l[?25h[39;49m]104(B[m[4l[?7h[H[2J[?2004h[?1h=[?1h=(B[0;7m  GNU nano 6.2                         /etc/pam.d/common-password                                   [1;99H(B[m[2d[36m#[3d# /etc/pam.d/common-password - password-related modules common to all services[4d#[5d# This file is included from other service-specific PAM config files,[6d# and should contain a list of modules that define the services to be[7d# used to change user passwords.  The default is pam_unix.[9d# Explanation of pam_unix options:[10d# The "yescrypt" option enables[11d#hashed passwords using the yescrypt algorithm, introduced in Debian[12d#11.  Without this option, the default is Unix crypt.  Prior releases[13d#used the option "sha512"; if a shadow password hash will be shared[14d#between Debian 11 and older releases replace "yescrypt" with "sha512"[15d#for compatibility .  The "obscure" option replaces the old[16d#`OBSCURE_CHECKS_ENAB' option in login.defs.  See the pam_unix manpage[17d#for other options.[19d# As of pam 1.0.1-6, this file is managed by pam-auth-update by default.[20d# To take advantage of this, it is recommended that you configure any[21d# local modules either before or after the default block, and use[23d[39m(B[0;7m^G(B[m Help[15G(B[0;7m^O(B[m Write Out  (B[0;7m^W(B[m Where Is   (B[0;7m^K(B[m Cut[23;57H(B[0;7m^T(B[m Execute    (B[0;7m^C(B[m Location   (B[0;7mM-U(B[m Undo[24d(B[0;7m^X(B[m Exit[15G(B[0;7m^R(B[m Read File  (B[0;7m^\(B[m Replace    (B[0;7m^U(B[m Paste[57G(B[0;7m^J(B[m Justify    (B[0;7m^/(B[m Go To Line (B[0;7mM-E(B[m Redo[?25l[?12l[?25h[2d[?25l[?12l[?25h[24;1H[?1049l[23;0;0t[?1l>[?1049h[22;0;0t[1;24r[?12l[?25h[39;49m]104(B[m[4l[?7h[H[2J(B[0;7m  GNU nano 6.2                         /etc/pam.d/common-password                                  [2d(B[0m[36m#[3d# /etc/pam.d/common-password - password-related modules common to all services[4d#[5d# This file is included from other service-specific PAM config files,[6d# and should contain a list of modules that define the services to be[7d# used to change user passwords.  The default is pam_unix.[9d# Explanation of pam_unix options:[10d# The "yescrypt" option enables[11d#hashed passwords using the yescrypt algorithm, introduced in Debian[12d#11.  Without this option, the default is Unix crypt.  Prior releases[13d#used the option "sha512"; if a shadow password hash will be shared[14d#between Debian 11 and older releases replace "yescrypt" with "sha512"[15d#for compatibility .  The "obscure" option replaces the old[16d#`OBSCURE_CHECKS_ENAB' option in login.defs.  See the pam_unix manpage[17d#for other options.[19d# As of pam 1.0.1-6, this file is managed by pam-auth-update by default.[20d# To take advantage of this, it is recommended that you configure any[21d# local modules either before or after the default block, and use[23d[39m(B[0;7m^G(B[m Help[15G(B[0;7m^O(B[m Write Out  (B[0;7m^W(B[m Where Is   (B[0;7m^K(B[m Cut[23;57H(B[0;7m^T(B[m Execute    (B[0;7m^C(B[m Location   (B[0;7mM-U(B[m Undo[24d(B[0;7m^X(B[m Exit[15G(B[0;7m^R(B[m Read File  (B[0;7m^\(B[m Replace    (B[0;7m^U(B[m Paste[57G(B[0;7m^J(B[m Justify    (B[0;7m^/(B[m Go To Line (B[0;7mM-E(B[m Redo[H[?2004h[?1h=[?1h=[23d[J[1;40H(B[0;7m /etc/pam.d/common-password[100G  [1;100H(B[m[23d(B[0;7m^G(B[m Help[15G(B[0;7m^O(B[m Write Out  (B[0;7m^W(B[m Where Is   (B[0;7m^K(B[m Cut[23;57H(B[0;7m^T(B[m Execute    (B[0;7m^C(B[m Location   (B[0;7mM-U(B[m Undo[24d(B[0;7m^X(B[m Exit[15G(B[0;7m^R(B[m Read File  (B[0;7m^\(B[m Replace    (B[0;7m^U(B[m Paste[57G(B[0;7m^J(B[m Justify    (B[0;7m^/(B[m Go To Line (B[0;7mM-E(B[m Redo[?25l[?12l[?25h[2d[?25l[?12l[?25h[24;1H[?1049l[23;0;0t[?1l>[?1049h[22;0;0t[1;24r[?12l[?25h[39;49m]104(B[m[4l[?7h[H[2J(B[0;7m  GNU nano 6.2                          /etc/pam.d/common-password                                  [2d(B[0m[36m#[3d# /etc/pam.d/common-password - password-related modules common to all services[4d#[5d# This file is included from other service-specific PAM config files,[6d# and should contain a list of modules that define the services to be[7d# used to change user passwords.  The default is pam_unix.[9d# Explanation of pam_unix options:[10d# The "yescrypt" option enables[11d#hashed passwords using the yescrypt algorithm, introduced in Debian[12d#11.  Without this option, the default is Unix crypt.  Prior releases[13d#used the option "sha512"; if a shadow password hash will be shared[14d#between Debian 11 and older releases replace "yescrypt" with "sha512"[15d#for compatibility .  The "obscure" option replaces the old[16d#`OBSCURE_CHECKS_ENAB' option in login.defs.  See the pam_unix manpage[17d#for other options.[19d# As of pam 1.0.1-6, this file is managed by pam-auth-update by default.[20d# To take advantage of this, it is recommended that you configure any[21d# local modules either before or after the default block, and use[23d[39m(B[0;7m^G(B[m Help[15G(B[0;7m^O(B[m Write Out  (B[0;7m^W(B[m Where Is   (B[0;7m^K(B[m Cut[23;57H(B[0;7m^T(B[m Execute    (B[0;7m^C(B[m Location   (B[0;7mM-U(B[m Undo[24d(B[0;7m^X(B[m Exit[15G(B[0;7m^R(B[m Read File  (B[0;7m^\(B[m Replace    (B[0;7m^U(B[m Paste[57G(B[0;7m^J(B[m Justify    (B[0;7m^/(B[m Go To Line (B[0;7mM-E(B[m Redo[H[?2004h[?1h=[?1h=[23d[J[1;41H(B[0;7m /etc/pam.d/common-password[101G   [1;102H(B[m[23d(B[0;7m^G(B[m Help[15G(B[0;7m^O(B[m Write Out  (B[0;7m^W(B[m Where Is   (B[0;7m^K(B[m Cut[23;57H(B[0;7m^T(B[m Execute    (B[0;7m^C(B[m Location   (B[0;7mM-U(B[m Undo[24d(B[0;7m^X(B[m Exit[15G(B[0;7m^R(B[m Read File  (B[0;7m^\(B[m Replace    (B[0;7m^U(B[m Paste[57G(B[0;7m^J(B[m Justify    (B[0;7m^/(B[m Go To Line (B[0;7mM-E(B[m Redo[?25l[?12l[?25h[2d[?25l[?12l[?25h[24;1H[?1049l[23;0;0t[?1l>[?1049h[22;0;0t[1;24r[?12l[?25h[39;49m]104(B[m[4l[?7h[H[2J(B[0;7m  GNU nano 6.2                           /etc/pam.d/common-password                                  [2d(B[0m[36m#[3d# /etc/pam.d/common-password - password-related modules common to all services[4d#[5d# This file is included from other service-specific PAM config files,[6d# and should contain a list of modules that define the services to be[7d# used to change user passwords.  The default is pam_unix.[9d# Explanation of pam_unix options:[10d# The "yescrypt" option enables[11d#hashed passwords using the yescrypt algorithm, introduced in Debian[12d#11.  Without this option, the default is Unix crypt.  Prior releases[13d#used the option "sha512"; if a shadow password hash will be shared[14d#between Debian 11 and older releases replace "yescrypt" with "sha512"[15d#for compatibility .  The "obscure" option replaces the old[16d#`OBSCURE_CHECKS_ENAB' option in login.defs.  See the pam_unix manpage[17d#for other options.[19d# As of pam 1.0.1-6, this file is managed by pam-auth-update by default.[20d# To take advantage of this, it is recommended that you configure any[21d# local modules either before or after the default block, and use[23d[39m(B[0;7m^G(B[m Help[15G(B[0;7m^O(B[m Write Out  (B[0;7m^W(B[m Where Is   (B[0;7m^K(B[m Cut[23;57H(B[0;7m^T(B[m Execute    (B[0;7m^C(B[m Location   (B[0;7mM-U(B[m Undo[24d(B[0;7m^X(B[m Exit[15G(B[0;7m^R(B[m Read File  (B[0;7m^\(B[m Replace    (B[0;7m^U(B[m Paste[57G(B[0;7m^J(B[m Justify    (B[0;7m^/(B[m Go To Line (B[0;7mM-E(B[m Redo[H[?2004h[?1h=[?1h=[23d[J[1;102H(B[0;7m   [1;103H(B[m[23d(B[0;7m^G(B[m Help[15G(B[0;7m^O(B[m Write Out  (B[0;7m^W(B[m Where Is   (B[0;7m^K(B[m Cut[23;57H(B[0;7m^T(B[m Execute    (B[0;7m^C(B[m Location   (B[0;7mM-U(B[m Undo[24d(B[0;7m^X(B[m Exit[15G(B[0;7m^R(B[m Read File  (B[0;7m^\(B[m Replace    (B[0;7m^U(B[m Paste[57G(B[0;7m^J(B[m Justify    (B[0;7m^/(B[m Go To Line (B[0;7mM-E(B[m Redo[?25l[?12l[?25h[2d[?25l[?12l[?25h[24;1H[?1049l[23;0;0t[?1l>[?1049h[22;0;0t[1;24r[?12l[?25h[39;49m]104(B[m[4l[?7h[H[2J(B[0;7m  GNU nano 6.2                           /etc/pam.d/common-password                                    [2d(B[0m[36m#[3d# /etc/pam.d/common-password - password-related modules common to all services[4d#[5d# This file is included from other service-specific PAM config files,[6d# and should contain a list of modules that define the services to be[7d# used to change user passwords.  The default is pam_unix.[9d# Explanation of pam_unix options:[10d# The "yescrypt" option enables[11d#hashed passwords using the yescrypt algorithm, introduced in Debian[12d#11.  Without this option, the default is Unix crypt.  Prior releases[13d#used the option "sha512"; if a shadow password hash will be shared[14d#between Debian 11 and older releases replace "yescrypt" with "sha512"[15d#for compatibility .  The "obscure" option replaces the old[16d#`OBSCURE_CHECKS_ENAB' option in login.defs.  See the pam_unix manpage[17d#for other options.[19d# As of pam 1.0.1-6, this file is managed by pam-auth-update by default.[20d# To take advantage of this, it is recommended that you configure any[21d# local modules either before or after the default block, and use[23d[39m(B[0;7m^G(B[m Help[15G(B[0;7m^O(B[m Write Out  (B[0;7m^W(B[m Where Is   (B[0;7m^K(B[m Cut[23;57H(B[0;7m^T(B[m Execute    (B[0;7m^C(B[m Location   (B[0;7mM-U(B[m Undo[24d(B[0;7m^X(B[m Exit[15G(B[0;7m^R(B[m Read File  (B[0;7m^\(B[m Replace    (B[0;7m^U(B[m Paste[57G(B[0;7m^J(B[m Justify    (B[0;7m^/(B[m Go To Line (B[0;7mM-E(B[m Redo[H[?2004h[?1h=[?1h=[23d[J[1;42H(B[0;7m /etc/pam.d/common-password[104G  [1;104H(B[m[23d(B[0;7m^G(B[m Help[23;16H(B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut[23;61H(B[0;7m^T(B[m Execute     (B[0;7m^C(B[m Location    (B[0;7mM-U(B[m Undo[24d(B[0;7m^X(B[m Exit[24;16H(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Paste[61G(B[0;7m^J(B[m Justify     (B[0;7m^/(B[m Go To Line  (B[0;7mM-E(B[m Redo[?25l[?12l[?25h[2d[?25l[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25h[8d[?25l[?12l[?25h[9d[?25l[?12l[?25h[10d[?25l[?12l[?25h[11d[?25l[?12l[?25h[12d[?25l[?12l[?25h[13d[?25l[?12l[?25h[14d[?25l[?12l[?25h[15d[?25l[?12l[?25h[16d[?25l[?12l[?25h[17d[?25l[?12l[?25h[18d[?25l[?12l[?25h[19d[?25l[?12l[?25h[20d[?25l[22d[?12l[?25h[A[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# pam-auth-update to manage selection of other modules.  See[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# pam-auth-update(8) for details.[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# here are the per-package modules (the "Primary" block)[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1Hpassword[38;5;208m        [39m(B[mrequisite[38;5;208m[23X[21;49H[39m(B[mpam_pwquality.so retry=3[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1Hpassword[38;5;208m        [39m(B[m[success=2 default=ignore][38;5;208m      [39m(B[mpam_unix.so obscure use_authtok try_first_pass yescrypt[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1Hpassword[38;5;208m        [39m(B[msufficient[38;5;208m[22X[21;49H[39m(B[mpam_sss.so use_authtok[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# here's the fallback if no module succeeds[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1Hpassword[38;5;208m        [39m(B[mrequisite[38;5;208m[23X[21;49H[39m(B[mpam_deny.so[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# prime the stack with a positive return value if there isn't one already;[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# this avoids us returning an error just because nothing sets a success code[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# since the modules above will each just jump around[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1Hpassword[38;5;208m        [39m(B[mrequired[38;5;208m[24X[21;49H[39m(B[mpam_permit.so[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# and here are more per-package modules (the "Additional" block)[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1Hpassword[38;5;208m        [39m(B[moptional[38;5;208m        [39m(B[mpam_gnome_keyring.so[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# end of pam-auth-update config[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h7[2;22r8M[1;24r[2;1H[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m#for other options.[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m#`OBSCURE_CHECKS_ENAB' option in login.defs.  See the pam_unix manpage[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m#for compatibility .  The "obscure" option replaces the old[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m#between Debian 11 and older releases replace "yescrypt" with "sha512"[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m#used the option "sha512"; if a shadow password hash will be shared[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m#11.  Without this option, the default is Unix crypt.  Prior releases[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m#hashed passwords using the yescrypt algorithm, introduced in Debian[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m# The "yescrypt" option enables[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m# Explanation of pam_unix options:[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m# used to change user passwords.  The default is pam_unix.[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m# and should contain a list of modules that define the services to be[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m# This file is included from other service-specific PAM config files,[39m(B[m[?25l[?12l[?25h7[2;22r8M[1;24r[2;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m# /etc/pam.d/common-password - password-related modules common to all services[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m#[39m(B[m[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25h[8d[?25l[?12l[?25h[9d[?25l[?12l[?25h[10d[?25l[?12l[?25h[11d[?25l[?12l[?25h[12d[?25l[?12l[?25h[13d[?25l[?12l[?25h[14d[?25l[?12l[?25h[15d[?25l[?12l[?25h[16d[?25l[?12l[?25h[17d[?25l[?12l[?25h[18d[?25l[?12l[?25h[19d[?25l[?12l[?25h[20d[?25l[?12l[?25h[21d[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# pam-auth-update to manage selection of other modules.  See[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# pam-auth-update(8) for details.[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# here are the per-package modules (the "Primary" block)[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1Hpassword[38;5;208m        [39m(B[mrequisite[38;5;208m[23X[21;49H[39m(B[mpam_pwquality.so retry=3[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1Hpassword[38;5;208m        [39m(B[m[success=2 default=ignore][38;5;208m      [39m(B[mpam_unix.so obscure use_authtok try_first_pass yescrypt[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1Hpassword[38;5;208m        [39m(B[msufficient[38;5;208m[22X[21;49H[39m(B[mpam_sss.so use_authtok[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# here's the fallback if no module succeeds[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1Hpassword[38;5;208m        [39m(B[mrequisite[38;5;208m[23X[21;49H[39m(B[mpam_deny.so[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# prime the stack with a positive return value if there isn't one already;[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# this avoids us returning an error just because nothing sets a success code[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# since the modules above will each just jump around[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1Hpassword[38;5;208m        [39m(B[mrequired[38;5;208m[24X[21;49H[39m(B[mpam_permit.so[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# and here are more per-package modules (the "Additional" block)[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1Hpassword[38;5;208m        [39m(B[moptional[38;5;208m        [39m(B[mpam_gnome_keyring.so[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# end of pam-auth-update config[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[1;70H(B[0;7m*[104G(B[m[9;22r[22;1H
+[1;24r[9;1H[?12l[?25h[?25l7[9;22r8M[1;24r[10;1H[?12l[?25h[?25l[?12l[?25h[A[?25l7[9;22r8M[1;24r[9;1Hpassword requisite pam_pwquality.so retry=3 minlen=14 dcredit=-1 ucredit=-1 ocredit=-1 lcredit=-1[10d[?12l[?25h[?25l[10;22r[22;1H
+[1;24r[9;98H[?12l[?25h[?25l[23;16H           (B[0;7mM-D(B[m DOS Format            (B[0;7mM-A(B[m Append[16X[23;79H(B[0;7mM-B(B[m Backup File[K[24;2H(B[0;7mC(B[m Cancel[16G           (B[0;7mM-M(B[m Mac Format            (B[0;7mM-P(B[m Prepend[15X[24;79H(B[0;7m^T(B[m Browse[K[22d(B[0;7mFile Name to Write: /etc/pam.d/common-password                                                           [22;47H(B[m[?12l[?25h[?25l[1K (B[0;7m[ Writing... ](B[m[K[1;70H(B[0;7m [104G(B[m[22;44H(B[0;7m[ Wrote 36 lines ](B[m[23;16H(B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut         (B[0;7m^T(B[m Execute     (B[0;7m^C(B[m Location    (B[0;7mM-U(B[m Undo[24;2H(B[0;7mX(B[m Exit  [16G(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Paste       (B[0;7m^J(B[m Justify     (B[0;7m^/(B[m Go To Line  (B[0;7mM-E(B[m Redo[?12l[?25h[9d[?25l[22d[J[24d[?12l[?25h[24;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h[32m[18:56:45] dele@dele-vBox:~/finbank-cis-ubuntu-hardening$ [0m ^?[K[7mUbuntu VM terminal, record password policy cha[27m[7mn[27m[7mges for proof:[27m[A[32m[18:56:45] dele@dele-vBox:~/finbank-cis-ubuntu-hardening$ [0m Ubuntu VM terminal, record password policy changes for proof:
+[?2004lUbuntu: command not found
+[?2004h[32m[18:57:15] dele@dele-vBox:~/finbank-cis-ubuntu-hardening$ [0m [7mcat /etc/login.defs /etc/pam.d/common-password[27m[7m [27m[7m> password-policy.txt [27m
+[7mgit add password-policy.txt && git commit -m "Document password aging and complexity policies"[27m
+[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccat /etc/login.defs /etc/pam.d/common-password > password-policy.txt
+git add password-policy.txt && git commit -m "Document password aging and complexity policies"
+[A
+[?2004l[master 82bb6e9] Document password aging and complexity policies
+ 1 file changed, 382 insertions(+)
+ create mode 100644 password-policy.txt
+[?2004h[32m[18:57:29] dele@dele-vBox:~/finbank-cis-ubuntu-hardening$ [0m V[K[7msudo nano /etc/ssh/sshd_config[27msudo nano /etc/ssh/sshd_config
+[?2004l[?2004h[?1049h[22;0;0t[1;24r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[22;46H(B[0;7m[ Reading... ](B[m[22;44H(B[0;7m[ Read 122 lines ](B[m[H(B[0;7m  GNU nano 6.2                               /etc/ssh/sshd_config                                        [1;104H(B[m[23d(B[0;7m^G(B[m Help[23;16H(B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut[23;61H(B[0;7m^T(B[m Execute     (B[0;7m^C(B[m Location    (B[0;7mM-U(B[m Undo[24d(B[0;7m^X(B[m Exit[24;16H(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Paste[61G(B[0;7m^J(B[m Justify     (B[0;7m^/(B[m Go To Line  (B[0;7mM-E(B[m Redo[3d[36m# This is the sshd server system-wide configuration file.  See[4d# sshd_config(5) for more information.[6d# This sshd was compiled with PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/gam[39m(B[0;7m>[8;1H(B[0m[36m# The strategy used for options in the default sshd_config shipped with[9d# OpenSSH is to specify options with their default value where[10d# possible, but leave them commented.  Uncommented options override the[11d# default value.[13d[39m(B[mInclude /etc/ssh/sshd_config.d/*.conf[15d[36m#Port 22[16d#AddressFamily any[17d#ListenAddress 0.0.0.0[18d#ListenAddress ::[20d#HostKey /etc/ssh/ssh_host_rsa_key[21d#HostKey /etc/ssh/ssh_host_ecdsa_key[2d[39m(B[m[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25h[8d[?25l[?12l[?25h[9d[?25l[?12l[?25h[10d[?25l[?12l[?25h[11d[?25l[?12l[?25h[12d[?25l[?12l[?25h[13d[?25l[?12l[?25h[14d[?25l[?12l[?25h[15d[?25l[?12l[?25h[16d[?25l[?12l[?25h[17d[?25l[?12l[?25h[18d[?25l[?12l[?25h[19d[?25l[?12l[?25h[20d[?25l[?12l[?25h[21d[?25l[22d[K[?12l[?25h7[2;22r8
+[1;24r[21;1H[36m#HostKey /etc/ssh/ssh_host_ed25519_key[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# Ciphers and keying[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#RekeyLimit default none[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# Logging[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#SyslogFacility AUTH[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#LogLevel INFO[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# Authentication:[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#LoginGraceTime 2m[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#PermitRootLogin prohibit-password[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#StrictModes yes[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#MaxAuthTries 6[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#MaxSessions 10[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#PubkeyAuthentication yes[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# Expect .ssh/authorized_keys2 to be disregarded by default in future.[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#AuthorizedKeysFile[38;5;208m     [36m.ssh/authorized_keys .ssh/authorized_keys2[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#AuthorizedPrincipalsFile none[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[?25l[?12l[?25h7[2;22r8[22d[2S[1;24r[20;1H[36m#AuthorizedKeysCommand none[21d#AuthorizedKeysCommandUser nobody[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# For this to work you will also need host keys in /etc/ssh/ssh_known_hosts[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#HostbasedAuthentication no[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# Change to yes if you don't trust ~/.ssh/known_hosts for[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# HostbasedAuthentication[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#IgnoreUserKnownHosts no[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# Don't read the user's ~/.rhosts and ~/.shosts files[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#IgnoreRhosts yes[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# To disable tunneled clear text passwords, change to no here![39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#PasswordAuthentication yes[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#PermitEmptyPasswords no[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# Change to yes to enable challenge-response passwords (beware issues with[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# some PAM modules and threads)[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1HKbdInteractiveAuthentication no[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# Kerberos options[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#KerberosAuthentication no[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#KerberosOrLocalPasswd yes[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#KerberosTicketCleanup yes[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#KerberosGetAFSToken no[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# GSSAPI options[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#GSSAPIAuthentication no[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#GSSAPICleanupCredentials yes[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#GSSAPIStrictAcceptorCheck yes[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#GSSAPIKeyExchange no[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# Set this to 'yes' to enable PAM authentication, account processing,[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# and session processing. If this is enabled, PAM authentication will[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# be allowed through the KbdInteractiveAuthentication and[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# PasswordAuthentication.  Depending on your PAM configuration,[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# PAM authentication via KbdInteractiveAuthentication may bypass[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# the setting of "PermitRootLogin without-password".[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# If you just want the PAM account and session checks to run without[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# PAM authentication, then enable this but set PasswordAuthentication[39m(B[m[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[?25l[?12l[?25h7[2;21r8M[1;24r[2;1HKbdInteractiveAuthentication no[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m# some PAM modules and threads)[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m# Change to yes to enable challenge-response passwords (beware issues with[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m#PermitEmptyPasswords no[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m#PasswordAuthentication yes[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m# To disable tunneled clear text passwords, change to no here![39m(B[m[?25l[?12l[?25h7[2;22r8M[1;24r[2;1H[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m#IgnoreRhosts yes[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m# Don't read the user's ~/.rhosts and ~/.shosts files[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m#IgnoreUserKnownHosts no[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m# HostbasedAuthentication[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m# Change to yes if you don't trust ~/.ssh/known_hosts for[39m(B[m[?25l[?12l[?25h7[2;22r8M[1;24r[2;1H[36m#HostbasedAuthentication no[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m# For this to work you will also need host keys in /etc/ssh/ssh_known_hosts[39m(B[m[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25h[8d[?25l[?12l[?25h[9d[?25l[?12l[?25h[10d[?25l[?12l[?25h[11d[?25l[?12l[?25h[12d[?25l[?12l[?25h[13d[?25l[?12l[?25h[14d[?25l[?12l[?25h[15d[?25l[?12l[?25h[16d[?25l[?12l[?25h[17d[?25l[?12l[?25h[18d[?25l[?12l[?25h[19d[?25l[?12l[?25h[20d[?25l[?12l[?25h[21d[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#KerberosGetAFSToken no[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# GSSAPI options[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#GSSAPIAuthentication no[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#GSSAPICleanupCredentials yes[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#GSSAPIStrictAcceptorCheck yes[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#GSSAPIKeyExchange no[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# Set this to 'yes' to enable PAM authentication, account processing,[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# and session processing. If this is enabled, PAM authentication will[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# be allowed through the KbdInteractiveAuthentication and[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# PasswordAuthentication.  Depending on your PAM configuration,[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# PAM authentication via KbdInteractiveAuthentication may bypass[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# the setting of "PermitRootLogin without-password".[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# If you just want the PAM account and session checks to run without[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# PAM authentication, then enable this but set PasswordAuthentication[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# and KbdInteractiveAuthentication to 'no'.[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1HUsePAM yes[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#AllowAgentForwarding yes[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#AllowTcpForwarding yes[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#GatewayPorts no[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1HX11Forwarding yes[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#X11DisplayOffset 10[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#X11UseLocalhost yes[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#PermitTTY yes[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1HPrintMotd no[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#PrintLastLog yes[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#TCPKeepAlive yes[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#PermitUserEnvironment no[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#Compression delayed[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#ClientAliveInterval 0[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#ClientAliveCountMax 3[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#UseDNS no[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#PidFile /run/sshd.pid[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#MaxStartups 10:30:100[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#PermitTunnel no[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#ChrootDirectory none[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#VersionAddendum none[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# no default banner path[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#Banner none[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# Allow client to pass locale environment variables[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1HAcceptEnv LANG LC_*[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# override default of no subsystems[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1HSubsystem[38;5;208m       [39m(B[msftp[38;5;208m    [39m(B[m/usr/lib/openssh/sftp-server[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# Example of overriding settings on a per-user basis[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#Match User anoncvs[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#[38;5;208m       [36mX11Forwarding no[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#[38;5;208m       [36mAllowTcpForwarding no[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#[38;5;208m       [36mPermitTTY no[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#[38;5;208m       [36mForceCommand cvs server[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h7[2;22r8M[1;24r[2;1H[36m#MaxStartups 10:30:100[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m#PidFile /run/sshd.pid[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m#UseDNS no[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m#ClientAliveCountMax 3[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m#ClientAliveInterval 0[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m#Compression delayed[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m#PermitUserEnvironment no[39m(B[m[?25l[?12l[?25h7[2;22r8M[1;24r[2;1H[36m#TCPKeepAlive yes[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m#PrintLastLog yes[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1HPrintMotd no[?25l[?12l[?25h7[2;22r8M[1;24r[2;1H[36m#PermitTTY yes[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m#X11UseLocalhost yes[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m#X11DisplayOffset 10[39m(B[m[?25l[?12l[?25h7[2;22r8M[1;24r[2;1HX11Forwarding yes[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m#GatewayPorts no[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m#AllowTcpForwarding yes[39m(B[m[?25l[?12l[?25h7[2;22r8M[1;24r[2;1H[36m#AllowAgentForwarding yes[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[?25l[?12l[?25h7[2;21r8M[1;24r[2;1HUsePAM yes[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m# and KbdInteractiveAuthentication to 'no'.[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m# PAM authentication, then enable this but set PasswordAuthentication[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m# If you just want the PAM account and session checks to run without[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m# the setting of "PermitRootLogin without-password".[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m# PAM authentication via KbdInteractiveAuthentication may bypass[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m# PasswordAuthentication.  Depending on your PAM configuration,[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m# be allowed through the KbdInteractiveAuthentication and[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m# and session processing. If this is enabled, PAM authentication will[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m# Set this to 'yes' to enable PAM authentication, account processing,[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m#GSSAPIKeyExchange no[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m#GSSAPIStrictAcceptorCheck yes[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m#GSSAPICleanupCredentials yes[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m#GSSAPIAuthentication no[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m# GSSAPI options[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m#KerberosGetAFSToken no[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m#KerberosTicketCleanup yes[39m(B[m[?25l[?12l[?25h7[2;22r8M[1;24r[2;1H[36m#KerberosOrLocalPasswd yes[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m#KerberosAuthentication no[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m# Kerberos options[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[?25l[?12l[?25h7[2;21r8M[1;24r[2;1HKbdInteractiveAuthentication no[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m# some PAM modules and threads)[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m# Change to yes to enable challenge-response passwords (beware issues with[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m#PermitEmptyPasswords no[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m#PasswordAuthentication yes[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m# To disable tunneled clear text passwords, change to no here![39m(B[m[?25l[?12l[?25h7[2;22r8M[1;24r[2;1H[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m#IgnoreRhosts yes[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m# Don't read the user's ~/.rhosts and ~/.shosts files[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m#IgnoreUserKnownHosts no[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m# HostbasedAuthentication[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m# Change to yes if you don't trust ~/.ssh/known_hosts for[39m(B[m[?25l[?12l[?25h7[2;22r8M[1;24r[2;1H[36m#HostbasedAuthentication no[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m# For this to work you will also need host keys in /etc/ssh/ssh_known_hosts[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m#AuthorizedKeysCommandUser nobody[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m#AuthorizedKeysCommand none[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[?25l[?12l[?25h7[2;22r8M[1;24r[2;1H[36m#AuthorizedPrincipalsFile none[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m#AuthorizedKeysFile[38;5;208m     [36m.ssh/authorized_keys .ssh/authorized_keys2[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m# Expect .ssh/authorized_keys2 to be disregarded by default in future.[39m(B[m[?25l[?12l[?25h7[2;22r8M[1;24r[2;1H[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m#PubkeyAuthentication yes[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m#MaxSessions 10[39m(B[m[?25l[?12l[?25h7[2;22r8M[1;24r[2;1H[36m#MaxAuthTries 6[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m#StrictModes yes[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m#PermitRootLogin prohibit-password[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m#LoginGraceTime 2m[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m# Authentication:[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m#LogLevel INFO[39m(B[m[?25l[?12l[?25h7[2;22r8M[1;24r[2;1H[36m#SyslogFacility AUTH[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m# Logging[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[?25l[?12l[?25h7[2;22r8M[1;24r[2;1H[36m#RekeyLimit default none[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m# Ciphers and keying[39m(B[m[?25l[?12l[?25h7[2;22r8M[1;24r[2;1H[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m#HostKey /etc/ssh/ssh_host_ed25519_key[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m#HostKey /etc/ssh/ssh_host_ecdsa_key[39m(B[m[?25l[?12l[?25h7[2;22r8M[1;24r[2;1H[36m#HostKey /etc/ssh/ssh_host_rsa_key[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[?25l[?12l[?25h7[2;22r8M[1;24r[2;1H[36m#ListenAddress ::[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m#ListenAddress 0.0.0.0[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m#AddressFamily any[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m#Port 22[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[?25l[?12l[?25h7[2;21r8M[1;24r[2;1HInclude /etc/ssh/sshd_config.d/*.conf[?25l[?12l[?25h7[2;22r8M[1;24r[2;1H[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m# default value.[39m(B[m[?25l[?12l[?25h7[2;22r8M[1;24r[2;1H[36m# possible, but leave them commented.  Uncommented options override the[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m# OpenSSH is to specify options with their default value where[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m# The strategy used for options in the default sshd_config shipped with[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[?25l[?12l[?25h7[2;22r8M[1;24r[2;1H[36m# This sshd was compiled with PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/gam[39m(B[0;7m>[2;1H(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m# sshd_config(5) for more information.[39m(B[m[?25l[?12l[?25h7[2;22r8M[1;24r[2;1H[36m# This is the sshd server system-wide configuration file.  See[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25h[8d[?25l[?12l[?25h[9d[?25l[?12l[?25h[10d[?25l[?12l[?25h[11d[?25l[?12l[?25h[12d[?25l[?12l[?25h[13d[?25l[?12l[?25h[14d[?25l[?12l[?25h[15d[?25l[?12l[?25h[16d[?25l[?12l[?25h[17d[?25l[?12l[?25h[18d[?25l[?12l[?25h[19d[?25l[?12l[?25h[20d[?25l[?12l[?25h[21d[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#HostKey /etc/ssh/ssh_host_ed25519_key[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# Ciphers and keying[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#RekeyLimit default none[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# Logging[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#SyslogFacility AUTH[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#LogLevel INFO[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# Authentication:[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#LoginGraceTime 2m[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#PermitRootLogin prohibit-password[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#StrictModes yes[39m(B[m[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m#Port 22[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[?25l[?12l[?25h7[2;21r8M[1;24r[2;1HInclude /etc/ssh/sshd_config.d/*.conf[?25l[?12l[?25h7[2;22r8M[1;24r[2;1H[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m# default value.[39m(B[m[?25l[?12l[?25h7[2;22r8M[1;24r[2;1H[36m# possible, but leave them commented.  Uncommented options override the[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m# OpenSSH is to specify options with their default value where[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m# The strategy used for options in the default sshd_config shipped with[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[?25l[?12l[?25h7[2;22r8M[1;24r[2;1H[36m# This sshd was compiled with PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/gam[39m(B[0;7m>[2;1H(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m# sshd_config(5) for more information.[39m(B[m[?25l[?12l[?25h7[2;22r8M[1;24r[2;1H[36m# This is the sshd server system-wide configuration file.  See[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25h[8d[?25l[?12l[?25h[9d[?25l[?12l[?25h[10d[?25l[?12l[?25h[11d[?25l[?12l[?25h[12d[?25l[?12l[?25h[13d[?25l[?12l[?25h[14d[?25l[?12l[?25h[15d[?25l[?12l[?25h[16d[?25l[?12l[?25h[17d[?25l[?12l[?25h[18d[?25l[?12l[?25h[19d[?25l[?12l[?25h[20d[?25l[?12l[?25h[21d[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#HostKey /etc/ssh/ssh_host_ed25519_key[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# Ciphers and keying[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#RekeyLimit default none[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# Logging[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#SyslogFacility AUTH[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#LogLevel INFO[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# Authentication:[39m(B[m[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[5d[?25l[?12l[?25h[C[?25l[1;67H(B[0;7m*[104G(B[m[?12l[?25h[5dPort 22[K[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25h[8d[?25l[?12l[?25h[9d[?25l[?12l[?25h[10d[?25l[?12l[?25h[11d[?25l[?12l[?25h[12d[?25l[?12l[?25h[13d[?25l[?12l[?25h[14d[?25l[?12l[?25h[15d[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l7[6;21r8M[1;24r[7;1H[?12l[?25h[?25l[6;22r[6;1HM[1;24r[8;1H[?12l[?25h[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l7[6;21r8[3T[1;24r[6;1HPermitRootLogin no[7dPasswordAuthentication yes[8dPubkeyAuthentication yes[9dLogLevel INFO[?12l[?25h[?25l[?12l[?25h[10d[?25l[10;22r[22;1H
+[1;24r[21;1H[36m# Logging[9;14H[39m(B[m[?12l[?25h[?25l[23;16H           (B[0;7mM-D(B[m DOS Format            (B[0;7mM-A(B[m Append[16X[23;79H(B[0;7mM-B(B[m Backup File[K[24;2H(B[0;7mC(B[m Cancel[16G           (B[0;7mM-M(B[m Mac Format            (B[0;7mM-P(B[m Prepend[15X[24;79H(B[0;7m^T(B[m Browse[K[22d(B[0;7mFile Name to Write: /etc/ssh/sshd_config                                                                 [22;41H(B[m[?12l[?25h[?25l    [1K (B[0;7m[ Writing... ](B[m[K[1;67H(B[0;7m [104G(B[m[22;44H(B[0;7m[ Wrote 126 lines ](B[m[23;16H(B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut         (B[0;7m^T(B[m Execute     (B[0;7m^C(B[m Location    (B[0;7mM-U(B[m Undo[24;2H(B[0;7mX(B[m Exit  [16G(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Paste       (B[0;7m^J(B[m Justify     (B[0;7m^/(B[m Go To Line  (B[0;7mM-E(B[m Redo[?12l[?25h[9;14H[?25l[22d[J[24d[?12l[?25h[24;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h[32m[19:01:45] dele@dele-vBox:~/finbank-cis-ubuntu-hardening$ [0m [7msudo systemctl restart sshd[27msudo systemctl restart sshd
+[?2004l[?2004h[32m[19:02:58] dele@dele-vBox:~/finbank-cis-ubuntu-hardening$ [0m [7msshd -T | grep -E "port|permitrootlogin|passwo[27m[7mr[27m[7mdauthentication|pubkeyauthentication|loglevel"[27m[A[32m[19:02:58] dele@dele-vBox:~/finbank-cis-ubuntu-hardening$ [0m sshd -T | grep -E "port|permitrootlogin|passwordauthentication|pubkeyauthentication|loglevel"
+[?2004lsshd: no hostkeys available -- exiting.
+[?2004h[32m[19:03:35] dele@dele-vBox:~/finbank-cis-ubuntu-hardening$ [0m [7msudo ssh-keygen -A[27m
+[7msudo systemctl restart sshd[27m
+[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo ssh-keygen -A
+sudo systemctl restart sshd
+[A
+[?2004lssh-keygen: generating new host keys: DSA 
+[?2004h[32m[19:04:18] dele@dele-vBox:~/finbank-cis-ubuntu-hardening$ [0m [7msshd -T | grep -E "port|permitrootlogin|passwo[27m[7mr[27m[7mdauthentication|pubkeyauthentication|loglevel" [27m
+[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csshd -T | grep -E "port|permitrootlogin|passwordauthentication|pubkeyauthentication|loglevel"
+[A
+[?2004lsshd: no hostkeys available -- exiting.
+[?2004h[32m[19:04:48] dele@dele-vBox:~/finbank-cis-ubuntu-hardening$ [0m [7mls -l /etc/ssh/ssh_host_*[27m
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls -l /etc/ssh/ssh_host_*
+[A
+[?2004l-rw------- 1 root root 1381 Dec 31 19:04 /etc/ssh/ssh_host_dsa_key
+-rw-r--r-- 1 root root  604 Dec 31 19:04 /etc/ssh/ssh_host_dsa_key.pub
+-rw------- 1 root root  505 Dec 17 19:35 /etc/ssh/ssh_host_ecdsa_key
+-rw-r--r-- 1 root root  176 Dec 17 19:35 /etc/ssh/ssh_host_ecdsa_key.pub
+-rw------- 1 root root  411 Dec 17 19:35 /etc/ssh/ssh_host_ed25519_key
+-rw-r--r-- 1 root root   96 Dec 17 19:35 /etc/ssh/ssh_host_ed25519_key.pub
+-rw------- 1 root root 2602 Dec 17 19:35 /etc/ssh/ssh_host_rsa_key
+-rw-r--r-- 1 root root  568 Dec 17 19:35 /etc/ssh/ssh_host_rsa_key.pub
+[?2004h[32m[19:05:17] dele@dele-vBox:~/finbank-cis-ubuntu-hardening$ [0m [7msudo chmod 600 /etc/ssh/ssh_host_*[27m
+[7msudo systemctl restart sshd[27m
+[7msshd -T | grep -E "port|permitrootlogin|passwordauthentication|pubkeyauthentication|loglevel"[27m
+[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo chmod 600 /etc/ssh/ssh_host_*
+sudo systemctl restart sshd
+sshd -T | grep -E "port|permitrootlogin|passwordauthentication|pubkeyauthentication|loglevel"
+[A
+[?2004lsshd: no hostkeys available -- exiting.
+[?2004h[32m[19:05:41] dele@dele-vBox:~/finbank-cis-ubuntu-hardening$ [0m [7msudo rm /etc/ssh/ssh_host_dsa_key /etc/ssh/ssh[27m[7m_[27m[7mhost_dsa_key.pub [27m
+[7msudo ssh-keygen -t rsa -b 4096 -f /etc/ssh/ssh_host_rsa_key -N ""[27m
+[7msudo ssh-keygen -t ecdsa -b 521 -f /etc/ssh/ssh_host_ecdsa_key -N ""[27m
+[7msudo ssh-keygen -t ed25519 -f /etc/ssh/ssh_host_ed25519_key -N ""[27m
+[7msudo systemctl restart sshd[27m
+[7msshd -T | grep -E "port|permitrootlogin|passwordauthentication|pubkeyauthentication|loglevel"[27m
+[A[A[A[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo rm /etc/ssh/ssh_host_dsa_key /etc/ssh/ssh_host_dsa_key.pub
+sudo ssh-keygen -t rsa -b 4096 -f /etc/ssh/ssh_host_rsa_key -N ""
+sudo ssh-keygen -t ecdsa -b 521 -f /etc/ssh/ssh_host_ecdsa_key -N ""
+sudo ssh-keygen -t ed25519 -f /etc/ssh/ssh_host_ed25519_key -N ""
+sudo systemctl restart sshd
+sshd -T | grep -E "port|permitrootlogin|passwordauthentication|pubkeyauthentication|loglevel"
+[A
+[?2004lGenerating public/private rsa key pair.
+/etc/ssh/ssh_host_rsa_key already exists.
+Overwrite (y/n)? y
+Your identification has been saved in /etc/ssh/ssh_host_rsa_key
+Your public key has been saved in /etc/ssh/ssh_host_rsa_key.pub
+The key fingerprint is:
+SHA256:YsBOAIs2OGLJYAdWQ1BCxyCYu20H/Gq38g6rg2NWqMY root@dele-vBox
+The key's randomart image is:
++---[RSA 4096]----+
+|*@XB             |
+|@.=+.            |
+|*O  +            |
+|=.+o .           |
+| o.o. o S        |
+|..o.o. .         |
+|+.oo             |
+|=E+o.            |
+|==.=+.           |
++----[SHA256]-----+
+Generating public/private ecdsa key pair.
+/etc/ssh/ssh_host_ecdsa_key already exists.
+Overwrite (y/n)? y
+Your identification has been saved in /etc/ssh/ssh_host_ecdsa_key
+Your public key has been saved in /etc/ssh/ssh_host_ecdsa_key.pub
+The key fingerprint is:
+SHA256:qGfQGUZtWouwPRbI//wnheZAxSDKyzK8zTWfyT7iKmA root@dele-vBox
+The key's randomart image is:
++---[ECDSA 521]---+
+|   . .o..o       |
+|   .+o..+ o      |
+|    o=o* o       |
+| . ..+B+o        |
+|  + +.*=S  .     |
+|.E * + ++oo .    |
+|... + o == .     |
+|  .  o... + .    |
+|   ..o.... o     |
++----[SHA256]-----+
+Generating public/private ed25519 key pair.
+/etc/ssh/ssh_host_ed25519_key already exists.
+Overwrite (y/n)? y
+Your identification has been saved in /etc/ssh/ssh_host_ed25519_key
+Your public key has been saved in /etc/ssh/ssh_host_ed25519_key.pub
+The key fingerprint is:
+SHA256:lWTVJ2PVTAFdePufxP62/wl3kb3i1+a6a7s/nsL9j6I root@dele-vBox
+The key's randomart image is:
++--[ED25519 256]--+
+|          o..oo*B|
+|         o .  *.=|
+|          o  . =.|
+|         .     .o|
+|        S     .oo|
+|               o+|
+|            .o+o=|
+|            oo=BO|
+|          E. +@/^|
++----[SHA256]-----+
+sshd: no hostkeys available -- exiting.
+[?2004h[32m[19:06:59] dele@dele-vBox:~/finbank-cis-ubuntu-hardening$ [0m [7msudo ls -l /etc/ssh/ssh_host_*[27m
+[7msudo chown root:root /etc/ssh/ssh_host_*[27m
+[7msudo chmod 600 /etc/ssh/ssh_host_*[27m
+[7msudo systemctl restart sshd[27m
+[7msshd -T | grep -E "port|permitrootlogin|passwordauthentication|pubkeyauthentication|loglevel"[27m
+[A[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo ls -l /etc/ssh/ssh_host_*
+sudo chown root:root /etc/ssh/ssh_host_*
+sudo chmod 600 /etc/ssh/ssh_host_*
+sudo systemctl restart sshd
+sshd -T | grep -E "port|permitrootlogin|passwordauthentication|pubkeyauthentication|loglevel"
+[A
+[?2004l-rw------- 1 root root  736 Dec 31 19:06 /etc/ssh/ssh_host_ecdsa_key
+-rw------- 1 root root  268 Dec 31 19:06 /etc/ssh/ssh_host_ecdsa_key.pub
+-rw------- 1 root root  411 Dec 31 19:06 /etc/ssh/ssh_host_ed25519_key
+-rw------- 1 root root   96 Dec 31 19:06 /etc/ssh/ssh_host_ed25519_key.pub
+-rw------- 1 root root 3381 Dec 31 19:06 /etc/ssh/ssh_host_rsa_key
+-rw------- 1 root root  740 Dec 31 19:06 /etc/ssh/ssh_host_rsa_key.pub
+sshd: no hostkeys available -- exiting.
+[?2004h[32m[19:08:14] dele@dele-vBox:~/finbank-cis-ubuntu-hardening$ [0m [7msudo nano /etc/ssh/sshd_config[27msudo nano /etc/ssh/sshd_config
+[?2004l[?2004h[?1049h[22;0;0t[1;24r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[22;46H(B[0;7m[ Reading... ](B[m[22;44H(B[0;7m[ Read 126 lines ](B[m[H(B[0;7m  GNU nano 6.2                               /etc/ssh/sshd_config                                        [1;104H(B[m[23d(B[0;7m^G(B[m Help[23;16H(B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut[23;61H(B[0;7m^T(B[m Execute     (B[0;7m^C(B[m Location    (B[0;7mM-U(B[m Undo[24d(B[0;7m^X(B[m Exit[24;16H(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Paste[61G(B[0;7m^J(B[m Justify     (B[0;7m^/(B[m Go To Line  (B[0;7mM-E(B[m Redo[3d[36m# This is the sshd server system-wide configuration file.  See[4d# sshd_config(5) for more information.[6d# This sshd was compiled with PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/gam[39m(B[0;7m>[8;1H(B[0m[36m# The strategy used for options in the default sshd_config shipped with[9d# OpenSSH is to specify options with their default value where[10d# possible, but leave them commented.  Uncommented options override the[11d# default value.[13d[39m(B[mInclude /etc/ssh/sshd_config.d/*.conf[15dPort 22[16dPermitRootLogin no[17dPasswordAuthentication yes[18dPubkeyAuthentication yes[19dLogLevel INFO[20d[36m#AddressFamily any[21d#ListenAddress 0.0.0.0[2d[39m(B[m[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25h[8d[?25l[?12l[?25h[9d[?25l[?12l[?25h[10d[?25l[?12l[?25h[11d[?25l[?12l[?25h[12d[?25l[?12l[?25h[13d[?25l[?12l[?25h[14d[?25l[?12l[?25h[15d[?25l[?12l[?25h[16d[?25l[?12l[?25h[17d[?25l[?12l[?25h[18d[?25l[?12l[?25h[19d[?25l[?12l[?25h[20d[?25l[?12l[?25h[21d[?25l[22d[K[?12l[?25h7[2;22r8
+[1;24r[21;1H[36m#ListenAddress ::[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#HostKey /etc/ssh/ssh_host_rsa_key[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#HostKey /etc/ssh/ssh_host_ecdsa_key[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#HostKey /etc/ssh/ssh_host_ed25519_key[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# Ciphers and keying[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#RekeyLimit default none[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# Logging[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#SyslogFacility AUTH[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#LogLevel INFO[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m# Authentication:[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#LoginGraceTime 2m[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#PermitRootLogin prohibit-password[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#StrictModes yes[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#MaxAuthTries 6[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[36m#MaxSessions 10[39m(B[m[?25l[?12l[?25h7[2;22r8[22d
+[1;24r[21;1H[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h7[2;22r8M[1;24r[2;1H[36m#ListenAddress ::[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m#ListenAddress 0.0.0.0[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1H[36m#AddressFamily any[39m(B[m[?25l[?12l[?25h7[2;21r8M[1;24r[2;1HLogLevel INFO[?25l[?12l[?25h7[2;21r8M[1;24r[2;1HPubkeyAuthentication yes[?25l[?12l[?25h7[2;21r8M[1;24r[2;1HPasswordAuthentication yes[?25l[?12l[?25h7[2;22r8M[1;24r[2;1HPermitRootLogin no[?25l[?12l[?25h7[2;21r8M[1;24r[2;1HPort 22[?25l[?12l[?25h7[2;22r8M[1;24r[2;1H[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25h[8d[?25l[?12l[?25h[9d[?25l[?12l[?25h[10d[?25l[?12l[?25h[11d[?25l[?12l[?25h[12d[?25l[1;67H(B[0;7m*[104G(B[m[11;22r[22;1H
+[1;24r[11;1H[?12l[?25h[?25l7[11;22r8M[1;24r[12;1H[?12l[?25h[?25l[?12l[?25h[C[?25l[?12l[?25hHostKey /etc/ssh/ssh_host_rsa_key[K[?25l[?12l[?25h[13d[?25l[?12l[?25h[C[?25l[?12l[?25hHostKey /etc/ssh/ssh_host_ecdsa_key[K[?25l[?12l[?25h[14d[?25l[?12l[?25h[C[?25l[?12l[?25hHostKey /etc/ssh/ssh_host_ed25519_key[K[?25l[23;16H           (B[0;7mM-D(B[m DOS Format            (B[0;7mM-A(B[m Append[16X[23;79H(B[0;7mM-B(B[m Backup File[K[24;2H(B[0;7mC(B[m Cancel[16G           (B[0;7mM-M(B[m Mac Format            (B[0;7mM-P(B[m Prepend[15X[24;79H(B[0;7m^T(B[m Browse[K[22d(B[0;7mFile Name to Write: /etc/ssh/sshd_config                                                                 [22;41H(B[m[?12l[?25h[?25l    [1K (B[0;7m[ Writing... ](B[m[K[1;67H(B[0;7m [104G(B[m[22;44H(B[0;7m[ Wrote 126 lines ](B[m[23;16H(B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut         (B[0;7m^T(B[m Execute     (B[0;7m^C(B[m Location    (B[0;7mM-U(B[m Undo[24;2H(B[0;7mX(B[m Exit  [16G(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Paste       (B[0;7m^J(B[m Justify     (B[0;7m^/(B[m Go To Line  (B[0;7mM-E(B[m Redo[?12l[?25h[14d[?25l[22d[J[24d[?12l[?25h[24;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h[32m[19:16:27] dele@dele-vBox:~/finbank-cis-ubuntu-hardening$ [0m [7msudo systemctl restart sshd[27m
+[7msshd -T | grep -E "port|permitrootlogin|passwordauthentication|pubkeyauthentication|loglevel"[27m
+[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo systemctl restart sshd
+sshd -T | grep -E "port|permitrootlogin|passwordauthentication|pubkeyauthentication|loglevel"
+[A
+[?2004lUnable to load host key: /etc/ssh/ssh_host_rsa_key
+Unable to load host key: /etc/ssh/ssh_host_ecdsa_key
+Unable to load host key: /etc/ssh/ssh_host_ed25519_key
+sshd: no hostkeys available -- exiting.
+[?2004h[32m[19:16:47] dele@dele-vBox:~/finbank-cis-ubuntu-hardening$ [0m V[K[7msudo aa-status[27m
+[7msestatus[27m
+[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo aa-status
+sestatus
+[A
+[?2004lapparmor module is loaded.
+57 profiles are loaded.
+55 profiles are in enforce mode.
+   /snap/snapd/21759/usr/lib/snapd/snap-confine
+   /snap/snapd/21759/usr/lib/snapd/snap-confine//mount-namespace-capture-helper
+   /snap/snapd/25577/usr/lib/snapd/snap-confine
+   /snap/snapd/25577/usr/lib/snapd/snap-confine//mount-namespace-capture-helper
+   /usr/bin/evince
+   /usr/bin/evince-previewer
+   /usr/bin/evince-previewer//sanitized_helper
+   /usr/bin/evince-thumbnailer
+   /usr/bin/evince//sanitized_helper
+   /usr/bin/evince//snap_browsers
+   /usr/bin/man
+   /usr/lib/NetworkManager/nm-dhcp-client.action
+   /usr/lib/NetworkManager/nm-dhcp-helper
+   /usr/lib/connman/scripts/dhclient-script
+   /usr/lib/cups/backend/cups-pdf
+   /usr/lib/snapd/snap-confine
+   /usr/lib/snapd/snap-confine//mount-namespace-capture-helper
+   /usr/sbin/cups-browsed
+   /usr/sbin/cupsd
+   /usr/sbin/cupsd//third_party
+   /{,usr/}sbin/dhclient
+   libreoffice-senddoc
+   libreoffice-soffice//gpg
+   libreoffice-xpdfimport
+   lsb_release
+   man_filter
+   man_groff
+   nvidia_modprobe
+   nvidia_modprobe//kmod
+   snap-update-ns.firefox
+   snap-update-ns.snap-store
+   snap-update-ns.snapd-desktop-integration
+   snap.firefox.firefox
+   snap.firefox.geckodriver
+   snap.firefox.hook.configure
+   snap.firefox.hook.disconnect-plug-host-hunspell
+   snap.firefox.hook.install
+   snap.firefox.hook.post-refresh
+   snap.snap-store.hook.configure
+   snap.snap-store.snap-store
+   snap.snap-store.ubuntu-software
+   snap.snap-store.ubuntu-software-local-file
+   snap.snapd-desktop-integration.hook.configure
+   snap.snapd-desktop-integration.snapd-desktop-integration
+   tcpdump
+   ubuntu_pro_apt_news
+   ubuntu_pro_esm_cache
+   ubuntu_pro_esm_cache//apt_methods
+   ubuntu_pro_esm_cache//apt_methods_gpgv
+   ubuntu_pro_esm_cache//cloud_id
+   ubuntu_pro_esm_cache//dpkg
+   ubuntu_pro_esm_cache//ps
+   ubuntu_pro_esm_cache//ubuntu_distro_info
+   ubuntu_pro_esm_cache_systemctl
+   ubuntu_pro_esm_cache_systemd_detect_virt
+2 profiles are in complain mode.
+   libreoffice-oosplash
+   libreoffice-soffice
+0 profiles are in kill mode.
+0 profiles are in unconfined mode.
+4 processes have profiles defined.
+4 processes are in enforce mode.
+   /usr/sbin/cups-browsed (972) 
+   /usr/sbin/cupsd (917) 
+   /snap/snapd-desktop-integration/315/usr/bin/snapd-desktop-integration (2149) snap.snapd-desktop-integration.snapd-desktop-integration
+   /snap/snapd-desktop-integration/315/usr/bin/snapd-desktop-integration (2229) snap.snapd-desktop-integration.snapd-desktop-integration
+0 processes are in complain mode.
+0 processes are unconfined but have a profile defined.
+0 processes are in mixed mode.
+0 processes are in kill mode.
+Command 'sestatus' not found, but can be installed with:
+sudo apt install policycoreutils
+[?2004h[32m[19:17:17] dele@dele-vBox:~/finbank-cis-ubuntu-hardening$ [0m [7msudo apt install policycoreutils -y[27m
+[7msestatus[27m
+[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo apt install policycoreutils -y
+sestatus
+[A
+[?2004lReading package lists... 0%Reading package lists... 100%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 0%Reading state information... Done
+The following additional packages will be installed:
+  selinux-utils
+The following NEW packages will be installed:
+  policycoreutils selinux-utils
+0 upgraded, 2 newly installed, 0 to remove and 0 not upgraded.
+Need to get 644 kB of archives.
+After this operation, 4,661 kB of additional disk space will be used.
+[33m0% [Working][0m[33m0% [Working][0m[33m0% [Working][0m[33m0% [Working][0m[33m0% [Working][0m[33m0% [Connecting to ng.archive.ubuntu.com][0m[33m0% [Connecting to ng.archive.ubuntu.com][0m[33m0% [Connecting to ng.archive.ubuntu.com][0m[33m0% [Connecting to ng.archive.ubuntu.com][0m[33m                                        0% [Waiting for headers][0m                        Get:1 http://ng.archive.ubuntu.com/ubuntu jammy/universe amd64 selinux-utils amd64 3.3-1build2 [107 kB]
+[33m2% [1 selinux-utils 13.5 kB/107 kB 13%][0m[33m9% [1 selinux-utils 71.5 kB/107 kB 67%][0m[33m                                       23% [Waiting for headers][0m                         Get:2 http://ng.archive.ubuntu.com/ubuntu jammy/universe amd64 policycoreutils amd64 3.3-1build1 [537 kB]
+[33m25% [2 policycoreutils 13.5 kB/537 kB 3%][0m[33m58% [2 policycoreutils 281 kB/537 kB 52%]                                                   64.2 kB/s 3s[0m[33m90% [2 policycoreutils 535 kB/537 kB 100%]                                                  64.2 kB/s 0s[0m[33m100% [Working]                                                                              64.2 kB/s 0s[0m                                                                                                        Fetched 644 kB in 7s (98.1 kB/s)
+
+7[0;23r8[1ASelecting previously unselected package selinux-utils.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 243320 files and directories currently installed.)
+Preparing to unpack .../selinux-utils_3.3-1build2_amd64.deb ...
+7[24;0f[42m[30mProgress: [  0%][49m[39m [...................................................................................] 87[24;0f[42m[30mProgress: [ 11%][49m[39m [#########..........................................................................] 8Unpacking selinux-utils (3.3-1build2) ...
+7[24;0f[42m[30mProgress: [ 22%][49m[39m [##################.................................................................] 8Selecting previously unselected package policycoreutils.
+Preparing to unpack .../policycoreutils_3.3-1build1_amd64.deb ...
+7[24;0f[42m[30mProgress: [ 33%][49m[39m [###########################........................................................] 8Unpacking policycoreutils (3.3-1build1) ...
+7[24;0f[42m[30mProgress: [ 44%][49m[39m [####################################...............................................] 8Setting up selinux-utils (3.3-1build2) ...
+7[24;0f[42m[30mProgress: [ 56%][49m[39m [##############################################.....................................] 87[24;0f[42m[30mProgress: [ 67%][49m[39m [#######################################################............................] 8Setting up policycoreutils (3.3-1build1) ...
+7[24;0f[42m[30mProgress: [ 78%][49m[39m [################################################################...................] 87[24;0f[42m[30mProgress: [ 89%][49m[39m [#########################################################################..........] 8Processing triggers for man-db (2.10.2-1) ...
+
+7[0;24r8[1A[JSELinux status:                 disabled
+[?2004h[32m[19:18:08] dele@dele-vBox:~/finbank-cis-ubuntu-hardening$ [0m V[K[7msestatus[27m
+
+
+
+
+
+
+[A[A[A[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csestatus
+
+
+
+
+
+
+[K[A[K[A[K[A[K[A[K[A[K[A[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004lSELinux status:                 disabled
+[?2004h[32m[19:18:22] dele@dele-vBox:~/finbank-cis-ubuntu-hardening$ [0m [7msudo ls -l /etc/ssh/ssh_host_*[27m
+[7msudo sshd -d[27m
+[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo ls -l /etc/ssh/ssh_host_*
+sudo sshd -d
+[A
+[?2004l-rw------- 1 root root  736 Dec 31 19:06 /etc/ssh/ssh_host_ecdsa_key
+-rw------- 1 root root  268 Dec 31 19:06 /etc/ssh/ssh_host_ecdsa_key.pub
+-rw------- 1 root root  411 Dec 31 19:06 /etc/ssh/ssh_host_ed25519_key
+-rw------- 1 root root   96 Dec 31 19:06 /etc/ssh/ssh_host_ed25519_key.pub
+-rw------- 1 root root 3381 Dec 31 19:06 /etc/ssh/ssh_host_rsa_key
+-rw------- 1 root root  740 Dec 31 19:06 /etc/ssh/ssh_host_rsa_key.pub
+sshd re-exec requires execution with an absolute path
+[?2004h[32m[19:19:00] dele@dele-vBox:~/finbank-cis-ubuntu-hardening$ [0m [7msudo /usr/sbin/sshd -d[27m
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo /usr/sbin/sshd -d
+[A
+[?2004ldebug1: sshd version OpenSSH_8.9, OpenSSL 3.0.2 15 Mar 2022
+debug1: private host key #0: ssh-rsa SHA256:YsBOAIs2OGLJYAdWQ1BCxyCYu20H/Gq38g6rg2NWqMY
+debug1: private host key #1: ecdsa-sha2-nistp521 SHA256:qGfQGUZtWouwPRbI//wnheZAxSDKyzK8zTWfyT7iKmA
+debug1: private host key #2: ssh-ed25519 SHA256:lWTVJ2PVTAFdePufxP62/wl3kb3i1+a6a7s/nsL9j6I
+debug1: rexec_argv[0]='/usr/sbin/sshd'
+debug1: rexec_argv[1]='-d'
+debug1: Set /proc/self/oom_score_adj from 0 to -1000
+debug1: Bind to port 22 on 0.0.0.0.
+Bind to port 22 on 0.0.0.0 failed: Address already in use.
+debug1: Bind to port 22 on ::.
+Bind to port 22 on :: failed: Address already in use.
+Cannot bind any address.
+[?2004h[32m[19:19:25] dele@dele-vBox:~/finbank-cis-ubuntu-hardening$ [0m [7msudo lsof -i :22[27m
+[7msudo systemctl stop ssh[27m
+[7msudo /usr/sbin/sshd -d[27m
+[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo lsof -i :22
+sudo systemctl stop ssh
+sudo /usr/sbin/sshd -d
+[A
+[?2004lCOMMAND  PID USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+sshd    3161 root    3u  IPv4  18410      0t0  TCP *:ssh (LISTEN)
+sshd    3161 root    4u  IPv6  18421      0t0  TCP *:ssh (LISTEN)
+debug1: sshd version OpenSSH_8.9, OpenSSL 3.0.2 15 Mar 2022
+debug1: private host key #0: ssh-rsa SHA256:YsBOAIs2OGLJYAdWQ1BCxyCYu20H/Gq38g6rg2NWqMY
+debug1: private host key #1: ecdsa-sha2-nistp521 SHA256:qGfQGUZtWouwPRbI//wnheZAxSDKyzK8zTWfyT7iKmA
+debug1: private host key #2: ssh-ed25519 SHA256:lWTVJ2PVTAFdePufxP62/wl3kb3i1+a6a7s/nsL9j6I
+Missing privilege separation directory: /run/sshd
+[?2004h[32m[19:22:53] dele@dele-vBox:~/finbank-cis-ubuntu-hardening$ [0m [7msudo mkdir -p /run/sshd[27m
+[7msudo chmod 755 /run/sshd[27m
+[7msudo systemctl start ssh[27m
+[7msshd -T | grep -E "port|permitrootlogin|passwordauthentication|pubkeyauthentication|loglevel"[27m
+[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo mkdir -p /run/sshd
+sudo chmod 755 /run/sshd
+sudo systemctl start ssh
+sshd -T | grep -E "port|permitrootlogin|passwordauthentication|pubkeyauthentication|loglevel"
+[A
+[?2004lUnable to load host key: /etc/ssh/ssh_host_rsa_key
+Unable to load host key: /etc/ssh/ssh_host_ecdsa_key
+Unable to load host key: /etc/ssh/ssh_host_ed25519_key
+sshd: no hostkeys available -- exiting.
+[?2004h[32m[19:23:17] dele@dele-vBox:~/finbank-cis-ubuntu-hardening$ [0m [7msudo rm /etc/ssh/ssh_host_*[27m
+[7msudo dpkg-reconfigure openssh-server[27m
+[7msudo systemctl restart ssh[27m
+[7msshd -T | grep -E "port|permitrootlogin|passwordauthentication|pubkeyauthentication|loglevel"[27m
+[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo rm /etc/ssh/ssh_host_*
+sudo dpkg-reconfigure openssh-server
+sudo systemctl restart ssh
+sshd -T | grep -E "port|permitrootlogin|passwordauthentication|pubkeyauthentication|loglevel"
+[A
+[?2004lCreating SSH2 RSA key; this may take some time ...
+3072 SHA256:pbOQ/ronlM0dEEKirRGjJesaeUrc37NfrAuBfu8Et2o root@dele-vBox (RSA)
+Creating SSH2 ECDSA key; this may take some time ...
+256 SHA256:L9jCrsM0D9Fx4gc+nIboEQHnn90vjtIUA+P+4lDdwbU root@dele-vBox (ECDSA)
+Creating SSH2 ED25519 key; this may take some time ...
+256 SHA256:En+4VjArT79CmZmZwBnDSP2FEd1YwhgwvjtpJmlfVfs root@dele-vBox (ED25519)
+rescue-ssh.target is a disabled or a static unit not running, not starting it.
+ssh.socket is a disabled or a static unit not running, not starting it.
+Unable to load host key: /etc/ssh/ssh_host_rsa_key
+Unable to load host key: /etc/ssh/ssh_host_ecdsa_key
+Unable to load host key: /etc/ssh/ssh_host_ed25519_key
+sshd: no hostkeys available -- exiting.
+[?2004h[32m[19:23:43] dele@dele-vBox:~/finbank-cis-ubuntu-hardening$ [0m [7msudo ls -ld /etc/ssh[27m
+[7msudo chown root:root /etc/ssh[27m
+[7msudo chmod 700 /etc/ssh[27m
+[7msudo dpkg-reconfigure openssh-server[27m
+[7msudo systemctl restart ssh[27m
+[7msshd -T | grep -E "port|permitrootlogin|passwordauthentication|pubkeyauthentication|loglevel"[27m
+[A[A[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo ls -ld /etc/ssh
+sudo chown root:root /etc/ssh
+sudo chmod 700 /etc/ssh
+sudo dpkg-reconfigure openssh-server
+sudo systemctl restart ssh
+sshd -T | grep -E "port|permitrootlogin|passwordauthentication|pubkeyauthentication|loglevel"
+[A
+[?2004ldrwxr-xr-x 4 root root 4096 Dec 31 19:23 /etc/ssh
+rescue-ssh.target is a disabled or a static unit not running, not starting it.
+ssh.socket is a disabled or a static unit not running, not starting it.
+/etc/ssh/sshd_config: Permission denied
+[?2004h[32m[19:24:17] dele@dele-vBox:~/finbank-cis-ubuntu-hardening$ [0m [7msudo chown root:root /etc/ssh/sshd_config[27m
+[7msudo chmod 600 /etc/ssh/sshd_config[27m
+[7msudo systemctl restart ssh[27m
+[7msshd -T | grep -E "port|permitrootlogin|passwordauthentication|pubkeyauthentication|loglevel"[27m
+[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo chown root:root /etc/ssh/sshd_config
+sudo chmod 600 /etc/ssh/sshd_config
+sudo systemctl restart ssh
+sshd -T | grep -E "port|permitrootlogin|passwordauthentication|pubkeyauthentication|loglevel"
+[A
+[?2004l/etc/ssh/sshd_config: Permission denied
+[?2004h[32m[19:24:41] dele@dele-vBox:~/finbank-cis-ubuntu-hardening$ [0m [7msudo lsattr /etc/ssh/sshd_config[27m
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo lsattr /etc/ssh/sshd_config
+[A
+[?2004l--------------e------- /etc/ssh/sshd_config
+[?2004h[32m[19:25:10] dele@dele-vBox:~/finbank-cis-ubuntu-hardening$ [0m [7msudo chattr -i /etc/ssh/sshd_config[27m
+[7msudo chmod 600 /etc/ssh/sshd_config[27m
+[7msudo systemctl restart ssh[27m
+[7msshd -T | grep -E "port|permitrootlogin|passwordauthentication|pubkeyauthentication|loglevel"[27m
+[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo chattr -i /etc/ssh/sshd_config
+sudo chmod 600 /etc/ssh/sshd_config
+sudo systemctl restart ssh
+sshd -T | grep -E "port|permitrootlogin|passwordauthentication|pubkeyauthentication|loglevel"
+[A
+[?2004l/etc/ssh/sshd_config: Permission denied
+[?2004h[32m[19:25:33] dele@dele-vBox:~/finbank-cis-ubuntu-hardening$ [0m [7msudo aa-complain /etc/ssh/sshd_config[27m
+[7msudo systemctl restart ssh[27m
+[7msshd -T | grep -E "port|permitrootlogin|passwordauthentication|pubkeyauthentication|loglevel"[27m
+[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo aa-complain /etc/ssh/sshd_config
+sudo systemctl restart ssh
+sshd -T | grep -E "port|permitrootlogin|passwordauthentication|pubkeyauthentication|loglevel"
+[A
+[?2004lsudo: aa-complain: command not found
+/etc/ssh/sshd_config: Permission denied
+[?2004h[32m[19:25:59] dele@dele-vBox:~/finbank-cis-ubuntu-hardening$ [0m [7msudo systemctl stop apparmor[27m
+[7msudo systemctl restart ssh[27m
+[7msshd -T | grep -E "port|permitrooSSH hardening applied: host keys regenerated, root login disabled, password auth enabled, log level INFO
