@@ -22,3 +22,9 @@ Verification performed using sshd -T and localhost SSH login.
 UFW configured with default deny incoming, allow outgoing.
 Proof saved in [ufw-proof.txt].
 
+## Implemented  Steps
+- System updated and patched
+- SSH hardening applied and verified
+- UFW firewall configured and verified
+- Unnecessary services disabled and documented
+- CIS password policies configured and documented
