@@ -17,3 +17,8 @@ CIS benchmark based secure configuration and hardening lab on Ubuntu using Kali 
 - Log level set to INFO
 
 Verification performed using sshd -T and localhost SSH login.
+
+## Firewall Hardening
+UFW configured with default deny incoming, allow outgoing.
+Proof saved in [ufw-proof.txt].
+
